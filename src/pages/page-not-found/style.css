@@ -1,0 +1,29 @@
+.page-not-found{
+  width: 100%;
+  text-align: center;
+  color: inherit;
+}
+
+.page-not-found h1{
+  font-size: 160px;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 20px;
+  line-height: 200px;
+}
+
+.page-not-found a{
+  text-decoration: none;
+  color: #fff;
+  background-color: #7575e2;
+  padding: 8px 19px;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.page-not-found a:hover{
+  background-color: #a2a2ff;
+}
