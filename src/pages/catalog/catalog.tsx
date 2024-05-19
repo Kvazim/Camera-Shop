@@ -1,6 +1,10 @@
 import ProductCard from '../../components/product-card/product-card';
+import { useAppSelector } from '../../hooks';
+import { getGoodsData } from '../../store/goods-process/goods-process.selector';
 
 function Catalog() {
+  const goodsData = useAppSelector(getGoodsData);
+
   return (
     <section className="catalog">
       <div className="container">
@@ -144,7 +148,7 @@ function Catalog() {
                   </div> */}
 
             <div className="cards catalog__cards">
-              <ProductCard />
+              {goodsData && goodsData.map((camera) => <ProductCard key={camera.id} camera={camera} />) }
             </div>
 
             {/* <div className="pagination">
