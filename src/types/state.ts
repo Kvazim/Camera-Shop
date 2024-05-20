@@ -4,6 +4,7 @@ import { Action, ThunkAction } from '@reduxjs/toolkit';
 import { Status } from '../const';
 import { Promotions } from './promotion';
 import { Camera, Cameras } from './cameras';
+import { Reviews } from './reviews';
 
 export type State = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
@@ -24,4 +25,9 @@ export type GoodsProcess = {
   goodIdLoadingStatus: Status;
   goodsData: Cameras;
   goodIdData: Camera | null;
+}
+
+export type ReviewsProcess = {
+  reviewsLoadingStatus: Status;
+  reviewsData: Reviews;
 }

@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { DEFAULT_STAR_COUNT } from '../../const';
+import { Numbers } from '../../const';
 
 type RatingStarsProps = {
   rating: number;
@@ -10,7 +10,7 @@ function RatingStars({ rating }: RatingStarsProps) {
 
   return (
     <>
-      {Array(DEFAULT_STAR_COUNT).fill(null).map((_, index) => (
+      {Array(Numbers.Five).fill(null).map((_, index) => (
         <svg key={getKey(index)} width="17" height="16" aria-hidden="true">
           <use xlinkHref={index < rating ? '#icon-full-star' : '#icon-star'}></use>
         </svg>

@@ -3,6 +3,7 @@ import { Extra } from '../types/state';
 import { APIRoute } from '../const';
 import { Promotions } from '../types/promotion';
 import { Camera, Cameras } from '../types/cameras';
+import { Reviews } from '../types/reviews';
 
 export const fetchPromoAction = createAsyncThunk<Promotions, undefined, Extra>(
   'data/fetchPromo',
@@ -26,4 +27,12 @@ export const fetchGoodsByIdAction = createAsyncThunk<Camera, Camera['id'], Extra
     const {data} = await api.get<Camera>(`${APIRoute.Cameras}/${id}`);
     return data;
   },
+);
+
+export const fetchReviewsIdAction = createAsyncThunk<Reviews, Camera['id'], Extra>(
+  'data/fetchReviewsId',
+  async (id: Camera['id'], {extra: api}) => {
+    const {data} = await api.get<Reviews>(`${APIRoute.Cameras}/${id}${APIRoute.Reviews}`);
+    return data;
+  }
 );
