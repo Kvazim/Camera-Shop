@@ -5,6 +5,7 @@ import Footer from '../footer/footer';
 import Header from '../header/header';
 import ScrollToTop from '../scroll-to-top/scroll-to-top';
 import { AppRoute } from '../../const';
+import ModalCall from '../modal-call/modal-call';
 
 function Layout() {
   const { pathname } = useLocation();
@@ -19,6 +20,7 @@ function Layout() {
           <ScrollToTop />
           <Outlet />
         </div>
+        <ModalCall />
       </main>
       <Footer />
     </div>
